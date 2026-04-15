@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>VIP HACK BY KASHYAP</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --neon-blue: #00d4ff;
+  --neon-green: #00ff41;
+  --neon-red: #ff003c;
+  --neon-purple: #b300ff;
+  --neon-gold: #ffea00;
+  --dark-bg: #050505;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background: var(--dark-bg);
+  color: #fff;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Matrix Background */
+.matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  font-family: monospace;
+  font-size: 14px;
+  color: rgba(0, 255, 65, 0.3);
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+  animation: matrix-fall linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes matrix-fall {
+  to { transform: translateY(200vh); }
+}
+
+/* Game Container */
+.game-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.game-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Light Effect Overlay */
+.light-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(255, 0, 60, 0.1) 0%, transparent 50%);
+  animation: light-pulse 4s ease-in-out infinite;
+}
+
+@keyframes light-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Top Panel - FIXED */
+.top-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.8) 100%);
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(0, 212, 255, 0.4);
+  box-shadow: 0 5px 30px rgba(0, 212, 255, 0.3);
+}
+
+.panel-content {
+  max-width: 380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vip-badge {
+  text-align: center;
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  animation: gradient-shift 2s linear infinite;
+  text-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.active-hack {
+  text-align: center;
+  color: var(--neon-green);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px var(--neon-green);
+  animation: pulse-text 1s infinite;
+}
+
+@keyframes pulse-text {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-telegram {
+  background: linear-gradient(90deg, #0088cc, #00a8e8);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 136, 204, 0.5);
+}
+
+.btn-start {
+  background: linear-gradient(90deg, #39ff14, #00cc00);
+  color: #000;
+  box-shadow: 0 4px 15px rgba(57, 255, 20, 0.5);
+  font-weight: 900;
+}
+
+.btn-start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(57, 255, 20, 0.7);
+}
+
+/* Draggable Injector - CHHOTA SIZE */
+.injector-container {
+  position: fixed;
+  z-index: 9999;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  display: none;
+}
+
+.injector-container.active {
+  display: block;
+}
+
+.injector-container:active {
+  cursor: grabbing;
+}
+
+.injector-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
+  border: 2px solid var(--neon-blue);
+  box-shadow: 
+    0 0 15px rgba(0, 212, 255, 0.6),
+    0 0 30px rgba(0, 212, 255, 0.4),
+    inset 0 0 15px rgba(0, 212, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: injector-pulse 2s infinite;
+}
+
+.injector-btn::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--neon-green);
+  border-right-color: var(--neon-green);
+  animation: spin 1s linear infinite;
+}
+
+.injector-btn::after {
+  content: '⚡';
+  font-size: 22px;
+  filter: drop-shadow(0 0 10px var(--neon-blue));
+  animation: icon-glow 1s infinite alternate;
+}
+
+@keyframes injector-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes icon-glow {
+  from { filter: drop-shadow(0 0 8px var(--neon-blue)); }
+  to { filter: drop-shadow(0 0 20px var(--neon-blue)) brightness(1.3); }
+}
+
+/* Prediction Box - BAHUT CHHOTA SIZE */
+.prediction-box {
+  position: fixed;
+  z-index: 10000;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  display: none;
+}
+
+.prediction-box.active {
+  display: block;
+}
+
+.prediction-box:active {
+  cursor: grabbing;
+}
+
+.prediction-inner {
+  width: 200px;
+  background: linear-gradient(145deg, rgba(10,10,10,0.98), rgba(20,10,10,0.98));
+  border: 2px solid var(--neon-red);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 
+    0 0 20px rgba(255, 0, 60, 0.6),
+    0 0 40px rgba(255, 0, 60, 0.3),
+    inset 0 0 20px rgba(255, 0, 60, 0.05);
+  animation: box-glow 2s infinite;
+  position: relative;
+}
+
+@keyframes box-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 60, 0.6), 0 0 40px rgba(255, 0, 60, 0.3); }
+  50% { box-shadow: 0 0 35px rgba(255, 0, 60, 0.9), 0 0 70px rgba(255, 0, 60, 0.5); }
+}
+
+/* Light rays */
+.light-rays {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  transform: translate(-50%, -50%);
+  background: conic-gradient(from 0deg, transparent, rgba(255,0,60,0.1), transparent, rgba(0,212,255,0.1), transparent);
+  animation: rays-spin 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rays-spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.box-header {
+  background: linear-gradient(90deg, #ff003c, #ff0066);
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.box-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.box-close {
+  width: 20px;
+  height: 20px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.box-close:hover {
+  background: rgba(255,0,0,0.8);
+  border-color: var(--neon-red);
+  transform: rotate(90deg);
+  box-shadow: 0 0 10px var(--neon-red);
+}
+
+.box-content {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left Side - CHHOTA */
+.box-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 45px;
+}
+
+.control-icon {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
+  border: 1px solid var(--neon-blue);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  animation: icon-spin 3s linear infinite;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+@keyframes icon-spin {
+  to { transform: rotate(360deg); }
+}
+
+.side-btn {
+  padding: 5px 2px;
+  background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  border-radius: 4px;
+  color: var(--neon-blue);
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+}
+
+.side-btn:hover {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+  transform: translateX(2px);
+}
+
+/* Right Side */
+.box-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.server-status {
+  text-align: center;
+  color: var(--neon-green);
+  font-size: 7px;
+  letter-spacing: 1px;
+  padding: 4px;
+  background: rgba(0, 255, 65, 0.1);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 255, 65, 0.4);
+  box-shadow: 0 0 5px rgba(0, 255, 65, 0.2);
+  animation: status-pulse 2s infinite;
+}
+
+@keyframes status-pulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 65, 0.2); }
+  50% { box-shadow: 0 0 10px rgba(0, 255, 65, 0.5); }
+}
+
+.main-result {
+  background: #000;
+  border: 1px solid rgba(255, 0, 60, 0.6);
+  border-radius: 6px;
+  padding: 10px 6px;
+  text-align: center;
+  min-height: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 15px rgba(255, 0, 60, 0.1);
+}
+
+/* NUMBER LIGHT EFFECTS - CHHOTA */
+.result-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: result-glow 1.5s ease-in-out infinite alternate;
+  position: relative;
+  z-index: 1;
+}
+
+.result-text.big {
+  color: var(--neon-red);
+  text-shadow: 
+    0 0 3px rgba(255, 0, 60, 1),
+    0 0 6px rgba(255, 0, 60, 0.9),
+    0 0 12px rgba(255, 0, 60, 0.8),
+    0 0 24px rgba(255, 0, 60, 0.6);
+  animation: big-pulse 1s infinite alternate;
+}
+
+.result-text.small {
+  color: var(--neon-green);
+  text-shadow: 
+    0 0 3px rgba(0, 255, 65, 1),
+    0 0 6px rgba(0, 255, 65, 0.9),
+    0 0 12px rgba(0, 255, 65, 0.8),
+    0 0 24px rgba(0, 255, 65, 0.6);
+  animation: small-pulse 1s infinite alternate;
+}
+
+@keyframes big-pulse {
+  from { 
+    filter: brightness(1);
+    text-shadow: 0 0 3px rgba(255, 0, 60, 1), 0 0 6px rgba(255, 0, 60, 0.9), 0 0 12px rgba(255, 0, 60, 0.8);
+  }
+  to { 
+    filter: brightness(1.5);
+    text-shadow: 0 0 6px rgba(255, 0, 60, 1), 0 0 12px rgba(255, 0, 60, 0.9), 0 0 24px rgba(255, 0, 60, 0.8), 0 0 48px rgba(255, 0, 60, 0.6);
+  }
+}
+
+@keyframes small-pulse {
+  from { 
+    filter: brightness(1);
+    text-shadow: 0 0 3px rgba(0, 255, 65, 1), 0 0 6px rgba(0, 255, 65, 0.9), 0 0 12px rgba(0, 255, 65, 0.8);
+  }
+  to { 
+    filter: brightness(1.5);
+    text-shadow: 0 0 6px rgba(0, 255, 65, 1), 0 0 12px rgba(0, 255, 65, 0.9), 0 0 24px rgba(0, 255, 65, 0.8), 0 0 48px rgba(0, 255, 65, 0.6);
+  }
+}
+
+/* PREDICTED NUMBER WITH LIGHT - CHHOTA */
+.predicted-number {
+  font-size: 9px;
+  color: var(--neon-gold);
+  margin-top: 4px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 
+    0 0 3px rgba(255, 234, 0, 0.9),
+    0 0 6px rgba(255, 234, 0, 0.8),
+    0 0 12px rgba(255, 234, 0, 0.6);
+  animation: number-glow 1s infinite alternate;
+}
+
+@keyframes number-glow {
+  from { 
+    filter: brightness(1);
+    text-shadow: 0 0 3px rgba(255, 234, 0, 0.9), 0 0 6px rgba(255, 234, 0, 0.8);
+  }
+  to { 
+    filter: brightness(1.4);
+    text-shadow: 0 0 6px rgba(255, 234, 0, 1), 0 0 12px rgba(255, 234, 0, 0.9), 0 0 18px rgba(255, 234, 0, 0.7);
+  }
+}
+
+.api-mods {
+  text-align: center;
+  color: var(--neon-blue);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+}
+
+/* BOTTOM INFO - CHHOTA */
+.box-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 1px solid rgba(255, 0, 60, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+.period-info {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 8px;
+  color: var(--neon-blue);
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.8);
+  font-weight: 700;
+}
+
+.timer {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  color: var(--neon-gold);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 234, 0, 0.8);
+  background: rgba(0,0,0,0.5);
+  padding: 2px 5px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 234, 0, 0.3);
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.loading-overlay.active {
+  display: flex;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(0, 212, 255, 0.2);
+  border-top-color: var(--neon-blue);
+  border-right-color: var(--neon-green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 8px;
+  font-size: 8px;
+  color: var(--neon-blue);
+  letter-spacing: 2px;
+  animation: text-blink 1s infinite;
+}
+
+@keyframes text-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Scan Line */
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-blue), var(--neon-green), transparent);
+  animation: scan 2s linear infinite;
+  opacity: 0.8;
+  z-index: 50;
+}
+
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+/* Corner lights - CHHOTA */
+.corner-light {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid;
+  z-index: 2;
+}
+
+.corner-light.top-left {
+  top: 3px;
+  left: 3px;
+  border-color: var(--neon-red) transparent transparent var(--neon-red);
+  box-shadow: -2px -2px 5px var(--neon-red);
+}
+
+.corner-light.top-right {
+  top: 3px;
+  right: 3px;
+  border-color: var(--neon-red) var(--neon-red) transparent transparent;
+  box-shadow: 2px -2px 5px var(--neon-red);
+}
+
+.corner-light.bottom-left {
+  bottom: 3px;
+  left: 3px;
+  border-color: transparent transparent var(--neon-red) var(--neon-red);
+  box-shadow: -2px 2px 5px var(--neon-red);
+}
+
+.corner-light.bottom-right {
+  bottom: 3px;
+  right: 3px;
+  border-color: transparent var(--neon-red) var(--neon-red) transparent;
+  box-shadow: 2px 2px 5px var(--neon-red);
+}
+</style>
+</head>
+<body>
+
+<!-- Matrix Background -->
+<div class="matrix-bg" id="matrixBg"></div>
+
+<!-- Light Overlay -->
+<div class="light-overlay"></div>
+
+<!-- Game Container -->
+<div class="game-container">
+  <iframe class="game-iframe" src="https://goa999.bet/#/register?invitationCode=716717425171" allowfullscreen></iframe>
+</div>
+
+<!-- Top Control Panel - FIXED -->
+<div class="top-panel" id="topPanel">
+  <div class="panel-content">
+    <div class="vip-badge">KASHYSP MODS 𝟭 𝗟𝗘𝗩𝗘𝗟 𝗙𝗜𝗫</div>
+    <div class="active-hack">⚡ ACTIVE HACK ⚡</div>
+    
+    <div class="btn-row">
+      <button class="btn btn-telegram" onclick="window.open('https://t.me/+f30vA5XjZaAyMzU1', '_blank')">
+        📱 JOIN TELEGRAM
+      </button>
+      <button class="btn btn-start" id="startHackBtn">
+        ▶ START HACK
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Draggable Injector Button - CHHOTA -->
+<div class="injector-container" id="injector">
+  <div class="injector-btn"></div>
+</div>
+
+<!-- Draggable Prediction Box - BAHUT CHHOTA -->
+<div class="prediction-box" id="predictionBox">
+  <div class="prediction-inner">
+    <div class="light-rays"></div>
+    <div class="scan-line"></div>
+    
+    <!-- Corner Lights -->
+    <div class="corner-light top-left"></div>
+    <div class="corner-light top-right"></div>
+    <div class="corner-light bottom-left"></div>
+    <div class="corner-light bottom-right"></div>
+    
+    <!-- Loading -->
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="spinner"></div>
+      <div class="loading-text">ANALYZING...</div>
+    </div>
+    
+    <!-- Header -->
+    <div class="box-header">
+      <span class="box-title">KASHYAP MODS</span>
+      <button class="box-close" id="closeBox">×</button>
+    </div>
+    
+    <!-- Content -->
+    <div class="box-content">
+      <!-- Left Controls -->
+      <div class="box-left">
+        <div class="control-icon">🌀</div>
+        <button class="side-btn" id="hideBtn">HIDEN</button>
+        <button class="side-btn" id="clearBtn">CLEAR</button>
+      </div>
+      
+      <!-- Right Display -->
+      <div class="box-right">
+        <div class="server-status">● Server Connected</div>
+        <div class="main-result">
+          <div class="result-text" id="resultText">WAIT...</div>
+          <div class="predicted-number" id="predictedNumber"></div>
+        </div>
+        <div class="api-mods">API MODS</div>
+      </div>
+    </div>
+    
+    <!-- Bottom - PERIOD & TIMER DISPLAY -->
+    <div class="box-bottom">
+      <span class="period-info" id="periodInfo">Loading...</span>
+      <span class="timer" id="timer">00:00</span>
+    </div>
+  </div>
+</div>
+
+<script>
+// Matrix Background
+function createMatrix() {
+  const matrixBg = document.getElementById('matrixBg');
+  const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+  
+  for (let i = 0; i < 25; i++) {
+    const column = document.createElement('div');
+    column.className = 'matrix-column';
+    column.style.left = Math.random() * 100 + '%';
+    column.style.animationDuration = (Math.random() * 3 + 2) + 's';
+    column.style.animationDelay = Math.random() * 2 + 's';
+    
+    let text = '';
+    for (let j = 0; j < 35; j++) {
+      text += chars[Math.floor(Math.random() * chars.length)] + '<br>';
+    }
+    column.innerHTML = text;
+    matrixBg.appendChild(column);
+  }
+}
+
+createMatrix();
+
+// Elements
+const startHackBtn = document.getElementById('startHackBtn');
+const injector = document.getElementById('injector');
+const predictionBox = document.getElementById('predictionBox');
+const closeBox = document.getElementById('closeBox');
+const resultText = document.getElementById('resultText');
+const predictedNumber = document.getElementById('predictedNumber');
+const periodInfo = document.getElementById('periodInfo');
+const timer = document.getElementById('timer');
+const loadingOverlay = document.getElementById('loadingOverlay');
+const hideBtn = document.getElementById('hideBtn');
+
+// State - CHHOTA SIZE
+let injectorX = window.innerWidth / 2 - 25;
+let injectorY = window.innerHeight / 2;
+let boxX = window.innerWidth / 2 - 100;
+let boxY = window.innerHeight / 2 - 75;
+let isInjectorDragging = false;
+let isBoxDragging = false;
+let dragOffsetX = 0;
+let dragOffsetY = 0;
+let timerInterval = null;
+let currentPeriod = null;
+let currentPrediction = null;
+let currentNumber = null;
+let lastPeriod = null;
+
+// Initialize positions
+injector.style.left = injectorX + 'px';
+injector.style.top = injectorY + 'px';
+predictionBox.style.left = boxX + 'px';
+predictionBox.style.top = boxY + 'px';
+
+// Start Hack Button
+startHackBtn.addEventListener('click', () => {
+  injector.classList.add('active');
+  startHackBtn.textContent = '✓ ACTIVE';
+  startHackBtn.style.background = 'linear-gradient(90deg, #00ff41, #00cc33)';
+});
+
+// Drag Functions
+let injectorDragged = false;
+
+injector.addEventListener('mousedown', startInjectorDrag);
+injector.addEventListener('touchstart', startInjectorDrag, {passive: false});
+
+function startInjectorDrag(e) {
+  isInjectorDragging = true;
+  injectorDragged = false;
+  
+  const clientX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+  const clientY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+  
+  dragOffsetX = clientX - injectorX;
+  dragOffsetY = clientY - injectorY;
+}
+
+predictionBox.addEventListener('mousedown', startBoxDrag);
+predictionBox.addEventListener('touchstart', startBoxDrag, {passive: false});
+
+function startBoxDrag(e) {
+  if (e.target.closest('.box-close') || e.target.closest('.side-btn')) return;
+  
+  isBoxDragging = true;
+  
+  const clientX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+  const clientY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+  
+  dragOffsetX = clientX - boxX;
+  dragOffsetY = clientY - boxY;
+}
+
+document.addEventListener('mousemove', handleDrag);
+document.addEventListener('touchmove', handleDrag, {passive: false});
+document.addEventListener('mouseup', endDrag);
+document.addEventListener('touchend', endDrag);
+
+function handleDrag(e) {
+  const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+  const clientY = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
+  
+  if (isInjectorDragging) {
+    e.preventDefault();
+    injectorDragged = true;
+    injectorX = clientX - dragOffsetX;
+    injectorY = clientY - dragOffsetY;
+    
+    injectorX = Math.max(0, Math.min(window.innerWidth - 50, injectorX));
+    injectorY = Math.max(0, Math.min(window.innerHeight - 50, injectorY));
+    
+    injector.style.left = injectorX + 'px';
+    injector.style.top = injectorY + 'px';
+  }
+  
+  if (isBoxDragging) {
+    e.preventDefault();
+    boxX = clientX - dragOffsetX;
+    boxY = clientY - dragOffsetY;
+    
+    boxX = Math.max(0, Math.min(window.innerWidth - 200, boxX));
+    boxY = Math.max(0, Math.min(window.innerHeight - 180, boxY));
+    
+    predictionBox.style.left = boxX + 'px';
+    predictionBox.style.top = boxY + 'px';
+  }
+}
+
+function endDrag() {
+  isInjectorDragging = false;
+  isBoxDragging = false;
+}
+
+// Injector Click -> Open Box
+injector.addEventListener('click', (e) => {
+  if (!injectorDragged) {
+    injector.classList.remove('active');
+    predictionBox.classList.add('active');
+    startPredictionSystem();
+  }
+});
+
+// Close Box -> Show Injector (EK BAR MEIN CLOSE)
+closeBox.addEventListener('click', (e) => {
+  e.stopPropagation();
+  predictionBox.classList.remove('active');
+  injector.classList.add('active');
+  stopPredictionSystem();
+});
+
+// Hide Button
+let isNumberHidden = false;
+hideBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  isNumberHidden = !isNumberHidden;
+  predictedNumber.style.opacity = isNumberHidden ? '0' : '1';
+  hideBtn.textContent = isNumberHidden ? 'SHOW' : 'HIDEN';
+});
+
+// Clear Button
+document.getElementById('clearBtn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  resultText.textContent = 'WAIT...';
+  resultText.className = 'result-text';
+  predictedNumber.textContent = '';
+});
+
+// EXACT CORRECT TIMER CODE as provided
+function getPeriodAndTime() {
+  const now = new Date();
+  
+  // Get UTC time components
+  const seconds = now.getUTCSeconds();
+  const remainingSeconds = 60 - seconds;
+  const minutes = now.getUTCMinutes();
+  const hours = now.getUTCHours();
+  const totalMinutes = hours * 60 + minutes;
+  
+  // Format date as yyyyMMdd
+  const year = now.getUTCFullYear();
+  const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(now.getUTCDate()).padStart(2, '0');
+  const dateStr = year + month + day;
+  
+  // Calculate period number: yyyyMMdd + 1000 + (10001 + totalMinutes)
+  const periodNum = 10001 + totalMinutes;
+  const periodNumber = dateStr + '1000' + periodNum;
+  
+  // Format timer: "  x x  :  x x" (exact format)
+  const minStr = '00';
+  const secStr = String(remainingSeconds).padStart(2, '0');
+  const formattedTime = `   ${minStr[0]} ${minStr[1]}  :  ${secStr[0]} ${secStr[1]}`;
+  
+  return {
+    periodNumber: periodNumber.toString(),
+    timer: formattedTime,
+    remainingSeconds: remainingSeconds,
+    isNewPeriod: remainingSeconds >= 59 || remainingSeconds <= 1
+  };
+}
+
+// Generate Prediction Algorithm
+function generatePrediction() {
+  // Random BIG or SMALL
+  const isBig = Math.random() > 0.5;
+  const prediction = isBig ? 'BIG' : 'SMALL';
+  
+  // Generate 1 number based on prediction
+  let number;
+  if (isBig) {
+    number = Math.floor(Math.random() * 5) + 5; // 5,6,7,8,9
+  } else {
+    number = Math.floor(Math.random() * 5); // 0,1,2,3,4
+  }
+  
+  return { prediction, number };
+}
+
+// Update Display - SHOW PERIOD & TIMER
+function updateDisplay(periodData) {
+  periodInfo.textContent = periodData.periodNumber;
+  timer.textContent = periodData.timer;
+  
+  // Check if new period started - AUTO GENERATE NEW PREDICTION
+  if (periodData.periodNumber !== lastPeriod && periodData.isNewPeriod) {
+    lastPeriod = periodData.periodNumber;
+    currentPeriod = periodData.periodNumber;
+    
+    // Generate new prediction for new period
+    const newPred = generatePrediction();
+    currentPrediction = newPred.prediction;
+    currentNumber = newPred.number;
+    
+    // Animate change with LIGHT EFFECT
+    resultText.style.opacity = '0';
+    setTimeout(() => {
+      resultText.textContent = currentPrediction;
+      resultText.className = 'result-text ' + (currentPrediction === 'BIG' ? 'big' : 'small');
+      predictedNumber.textContent = 'Number: ' + currentNumber;
+      resultText.style.opacity = '1';
+    }, 300);
+  }
+}
+
+// Start Prediction System
+function startPredictionSystem() {
+  loadingOverlay.classList.add('active');
+  
+  const initialData = getPeriodAndTime();
+  periodInfo.textContent = initialData.periodNumber;
+  timer.textContent = initialData.timer;
+  
+  setTimeout(() => {
+    loadingOverlay.classList.remove('active');
+    
+    const periodData = getPeriodAndTime();
+    lastPeriod = periodData.periodNumber;
+    currentPeriod = periodData.periodNumber;
+    
+    const newPred = generatePrediction();
+    currentPrediction = newPred.prediction;
+    currentNumber = newPred.number;
+    
+    resultText.textContent = currentPrediction;
+    resultText.className = 'result-text ' + (currentPrediction === 'BIG' ? 'big' : 'small');
+    predictedNumber.textContent = 'Number: ' + currentNumber;
+    
+    periodInfo.textContent = periodData.periodNumber;
+    timer.textContent = periodData.timer;
+  }, 2000);
+  
+  timerInterval = setInterval(() => {
+    const periodData = getPeriodAndTime();
+    updateDisplay(periodData);
+  }, 1000);
+}
+
+// Stop Prediction System
+function stopPredictionSystem() {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+}
+
+// Prevent context menu
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Handle resize
+window.addEventListener('resize', () => {
+  injectorX = Math.min(injectorX, window.innerWidth - 50);
+  injectorY = Math.min(injectorY, window.innerHeight - 50);
+  boxX = Math.min(boxX, window.innerWidth - 200);
+  boxY = Math.min(boxY, window.innerHeight - 180);
+  
+  injector.style.left = injectorX + 'px';
+  injector.style.top = injectorY + 'px';
+  predictionBox.style.left = boxX + 'px';
+  predictionBox.style.top = boxY + 'px';
+});
+</script>
+
+</body>
+</html>
